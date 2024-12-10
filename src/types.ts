@@ -8,14 +8,22 @@ export type Candle = {
     fragranceId: number
     createdAt: string
     updatedAt: string
-    }
+}
+
+export type CandleCreateModel = {
+    name: string
+    description: string
+    price: number
+    categoryId: number
+    colorId: number
+    fragranceId: number
+}
 
 export type Category = {
     id: number
     name: string
     description: string
-    }
-
+}
 
 export type Color = {
     id: number
@@ -82,4 +90,9 @@ export type User = {
     address: string
     createdAt: string
     updatedAt: string
+}
+
+export interface ApiResponse {
+    message: string;
+    data: any[];
 }
